@@ -1,0 +1,402 @@
+{
+  "mode": "llm",
+  "model": "qwen3.6-plus",
+  "weights": {
+    "helpfulness": 0.4,
+    "accuracy": 0.3,
+    "truthfulness": 0.2,
+    "tone": 0.1
+  },
+  "metric_names": {
+    "helpfulness": "有用性",
+    "accuracy": "准确性",
+    "truthfulness": "真实性/不瞎编造",
+    "tone": "语气友好"
+  },
+  "summary": {
+    "case_count": 20,
+    "overall_average": 3.28,
+    "metric_averages": {
+      "helpfulness": 2.6,
+      "accuracy": 3.45,
+      "truthfulness": 4.25,
+      "tone": 3.6
+    },
+    "metric_distribution": {
+      "helpfulness": {
+        "1": 0,
+        "2": 11,
+        "3": 6,
+        "4": 3,
+        "5": 0
+      },
+      "accuracy": {
+        "1": 0,
+        "2": 1,
+        "3": 10,
+        "4": 8,
+        "5": 1
+      },
+      "truthfulness": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 15,
+        "5": 5
+      },
+      "tone": {
+        "1": 0,
+        "2": 0,
+        "3": 9,
+        "4": 10,
+        "5": 1
+      }
+    },
+    "worst_case_ids": [
+      "case_20",
+      "case_06",
+      "case_11"
+    ]
+  },
+  "results": [
+    {
+      "id": "case_01",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 2,
+        "accuracy": 3,
+        "truthfulness": 4,
+        "tone": 4
+      },
+      "overall": 2.9,
+      "issues": [
+        "回复偏通用，未主动承接处理，用户仍需自行查询或操作。",
+        "出现把问题推回给用户的表达，降低有用性。",
+        "人工参考中包含主动服务动作，自动回复覆盖不足。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    },
+    {
+      "id": "case_02",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 2,
+        "accuracy": 3,
+        "truthfulness": 4,
+        "tone": 4
+      },
+      "overall": 2.9,
+      "issues": [
+        "回复偏通用，未主动承接处理，用户仍需自行查询或操作。",
+        "出现把问题推回给用户的表达，降低有用性。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    },
+    {
+      "id": "case_03",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 3,
+        "accuracy": 4,
+        "truthfulness": 4,
+        "tone": 3
+      },
+      "overall": 3.5,
+      "issues": [
+        "出现把问题推回给用户的表达，降低有用性。",
+        "人工参考中包含主动服务动作，自动回复覆盖不足。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    },
+    {
+      "id": "case_04",
+      "mode": "llm",
+      "model": "qwen3.6-plus",
+      "scores": {
+        "helpfulness": 2,
+        "accuracy": 3,
+        "truthfulness": 4,
+        "tone": 4
+      },
+      "overall": 2.9,
+      "issues": [
+        "未优先利用用户已提供的“购买三天”信息直接走售后流程",
+        "前置冗余排查步骤增加用户操作成本"
+      ],
+      "reason": "回复虽提及质保政策，但无视用户已明确的时间信息，前置排查步骤增加操作负担，未能直接承接售后诉求。"
+    },
+    {
+      "id": "case_05",
+      "mode": "llm",
+      "model": "qwen3.6-plus",
+      "scores": {
+        "helpfulness": 2,
+        "accuracy": 3,
+        "truthfulness": 4,
+        "tone": 4
+      },
+      "overall": 2.9,
+      "issues": [
+        "未直接承接用户原始问题，转而提及内部培训措施",
+        "缺乏主动追问具体诉求的引导"
+      ],
+      "reason": "回复虽礼貌道歉但未聚焦即时解决问题，内部承诺降低实用价值"
+    },
+    {
+      "id": "case_06",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 2,
+        "accuracy": 3,
+        "truthfulness": 4,
+        "tone": 3
+      },
+      "overall": 2.8,
+      "issues": [
+        "回复偏通用，未主动承接处理，用户仍需自行查询或操作。",
+        "出现把问题推回给用户的表达，降低有用性。",
+        "人工参考中包含主动服务动作，自动回复覆盖不足。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    },
+    {
+      "id": "case_07",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 3,
+        "accuracy": 3,
+        "truthfulness": 4,
+        "tone": 3
+      },
+      "overall": 3.2,
+      "issues": [
+        "出现把问题推回给用户的表达，降低有用性。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    },
+    {
+      "id": "case_08",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 2,
+        "accuracy": 4,
+        "truthfulness": 5,
+        "tone": 4
+      },
+      "overall": 3.4,
+      "issues": [
+        "回复偏通用，未主动承接处理，用户仍需自行查询或操作。",
+        "出现把问题推回给用户的表达，降低有用性。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    },
+    {
+      "id": "case_09",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 3,
+        "accuracy": 4,
+        "truthfulness": 5,
+        "tone": 3
+      },
+      "overall": 3.7,
+      "issues": [
+        "出现把问题推回给用户的表达，降低有用性。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    },
+    {
+      "id": "case_10",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 4,
+        "accuracy": 4,
+        "truthfulness": 5,
+        "tone": 4
+      },
+      "overall": 4.2,
+      "issues": [
+        "出现把问题推回给用户的表达，降低有用性。",
+        "人工参考中包含主动服务动作，自动回复覆盖不足。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    },
+    {
+      "id": "case_11",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 2,
+        "accuracy": 3,
+        "truthfulness": 4,
+        "tone": 3
+      },
+      "overall": 2.8,
+      "issues": [
+        "回复偏通用，未主动承接处理，用户仍需自行查询或操作。",
+        "人工参考中包含主动服务动作，自动回复覆盖不足。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    },
+    {
+      "id": "case_12",
+      "mode": "llm",
+      "model": "qwen3.6-plus",
+      "scores": {
+        "helpfulness": 2,
+        "accuracy": 3,
+        "truthfulness": 4,
+        "tone": 4
+      },
+      "overall": 2.9,
+      "issues": [
+        "未主动要求提供订单号以查询具体物流状态",
+        "将跟进责任转移给用户而非主动协助处理"
+      ],
+      "reason": "回复虽列出合理原因且语气礼貌，但未主动承接查询责任，用户需自行联系快递或等待，降低问题解决效率。"
+    },
+    {
+      "id": "case_13",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 2,
+        "accuracy": 3,
+        "truthfulness": 4,
+        "tone": 4
+      },
+      "overall": 2.9,
+      "issues": [
+        "回复偏通用，未主动承接处理，用户仍需自行查询或操作。",
+        "出现把问题推回给用户的表达，降低有用性。",
+        "人工参考中包含主动服务动作，自动回复覆盖不足。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    },
+    {
+      "id": "case_14",
+      "mode": "llm",
+      "model": "qwen3.6-plus",
+      "scores": {
+        "helpfulness": 4,
+        "accuracy": 5,
+        "truthfulness": 5,
+        "tone": 5
+      },
+      "overall": 4.6,
+      "issues": [
+        "未主动追问用户具体商品需求",
+        "反馈跟进措施不够明确"
+      ],
+      "reason": "回复有效承接建议并提供现有解决方案，但缺乏主动追问具体需求以进一步降低用户操作成本。"
+    },
+    {
+      "id": "case_15",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 3,
+        "accuracy": 4,
+        "truthfulness": 4,
+        "tone": 4
+      },
+      "overall": 3.6,
+      "issues": [
+        "人工参考中包含主动服务动作，自动回复覆盖不足。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    },
+    {
+      "id": "case_16",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 3,
+        "accuracy": 4,
+        "truthfulness": 4,
+        "tone": 3
+      },
+      "overall": 3.5,
+      "issues": [
+        "出现把问题推回给用户的表达，降低有用性。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    },
+    {
+      "id": "case_17",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 3,
+        "accuracy": 4,
+        "truthfulness": 4,
+        "tone": 3
+      },
+      "overall": 3.5,
+      "issues": [
+        "出现把问题推回给用户的表达，降低有用性。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    },
+    {
+      "id": "case_18",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 4,
+        "accuracy": 4,
+        "truthfulness": 5,
+        "tone": 4
+      },
+      "overall": 4.2,
+      "issues": [
+        "出现把问题推回给用户的表达，降低有用性。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    },
+    {
+      "id": "case_19",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 2,
+        "accuracy": 3,
+        "truthfulness": 4,
+        "tone": 3
+      },
+      "overall": 2.8,
+      "issues": [
+        "回复偏通用，未主动承接处理，用户仍需自行查询或操作。",
+        "出现把问题推回给用户的表达，降低有用性。",
+        "人工参考中包含主动服务动作，自动回复覆盖不足。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    },
+    {
+      "id": "case_20",
+      "mode": "mock_fallback",
+      "scores": {
+        "helpfulness": 2,
+        "accuracy": 2,
+        "truthfulness": 4,
+        "tone": 3
+      },
+      "overall": 2.5,
+      "issues": [
+        "回复偏通用，未主动承接处理，用户仍需自行查询或操作。",
+        "回复没有命中用户核心诉求，存在答非所问风险。",
+        "人工参考中包含主动服务动作，自动回复覆盖不足。"
+      ],
+      "reason": "mock 模式根据人工标注趋势、主动服务信号、推责表达和事实风险规则评分。",
+      "llm_error": "The read operation timed out"
+    }
+  ]
+}
